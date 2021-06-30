@@ -1,7 +1,14 @@
 <template>
   <div class="d-flex">
     <random-avatar :size="40" class="mx-3 my-1" />
-    <input style="form-control text-control" v-model="comment" placeholder="Add your own comment..." />
+    <div class="flex-grow-1">
+      <input
+        class="form-control form-control-md mt-1"
+        type="text"
+        v-model="comment"
+        placeholder="Add your own comment..."
+      />
+    </div>
     <button class="btn" title="Post your comment" :disabled="comment">
       <bs-icon icon="caret-right" :size="30" />
     </button>
@@ -21,9 +28,3 @@ export default {
   },
 };
 </script>
-
-<style lang="scss" scoped>
-.text-control {
-  width: 100%;
-}
-</style>

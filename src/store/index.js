@@ -1,6 +1,7 @@
-import Vuex from "vuex";
+import { createStore } from "vuex";
+import { FeedStore } from "./feed";
 
-const store = {
+const rootStore = {
   state: {
     user: null,
   },
@@ -11,8 +12,10 @@ const store = {
     },
   },
   actions: {},
+  modules: {
+    feed: FeedStore,
+  },
 };
 
-const vxStore = new Vuex.Store(store);
-
-export { vxStore as store };
+const store = createStore(rootStore);
+export { store };
