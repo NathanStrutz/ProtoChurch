@@ -2,16 +2,22 @@
   <h2>My Groups</h2>
   <div class="container container-fluid">
     <div class="row justify-content-center">
-      <div class="col" v-for="groupId in myGroups" :key="groupId">
-        <group-card :id="groupId" />
+      <div class="col" v-for="group in myGroups" :key="group.id">
+        <group-card :id="group.id" />
+      </div>
+      <div v-if="myGroups.length === 0">
+        <h4>You don't have any groups</h4>
       </div>
     </div>
   </div>
   <h2 class="pt-5">Public Groups</h2>
   <div class="container container-fluid">
-    <div class="row">
-      <div class="col">
-        <group-card v-for="groupId in openGroups" :key="groupId" :id="groupId" />
+    <div class="row justify-content-center">
+      <div class="col" v-for="group in openGroups" :key="group.id">
+        <group-card :id="group.id" />
+      </div>
+      <div v-if="openGroups.length === 0">
+        <h4>There aren't any open groups available</h4>
       </div>
     </div>
   </div>
@@ -25,7 +31,7 @@ export default {
   components: { GroupCard },
 
   computed: {
-    ...mapState("groups", ["myGroups", "openGroups"]),
+    ...mapGetters("groups", ["myGroups", "openGroups"]),
   },
 };
 </script>

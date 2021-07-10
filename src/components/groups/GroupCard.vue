@@ -7,12 +7,12 @@
     <div class="card-footer text-end" v-if="group.isJoined">
       <router-link :to="`/groups/${group.id}`">Enter Group</router-link>
     </div>
-    <div class="card-footer text-end" v-else><a href="">Join this group</a></div>
+    <div class="card-footer text-end" v-else><a href="#" @click="join">Join this group</a></div>
   </div>
 </template>
 
 <script>
-import { mapGetters, mapState } from "vuex";
+import { mapActions, mapGetters, mapState } from "vuex";
 
 export default {
   props: {
@@ -20,8 +20,16 @@ export default {
   },
   computed: {
     ...mapGetters("groups", ["getGroup"]),
+
     group() {
       return this.getGroup(this.id);
+    },
+  },
+  methods: {
+    ...mapActions("groups", ["joinGroup"]),
+
+    join() {
+      this.joinGroup(this.id);
     },
   },
 };
