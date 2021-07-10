@@ -3,7 +3,10 @@
     <div class="row">
       <div class="col">
         <h1 class="display-1">Grace Protochurch</h1>
-        <p class="display-6">Connect with Christians, grow closer to God, and experience online community.</p>
+        <p class="display-6">
+          Connect with Christians, grow closer to God, and experience online community, right here at Grace Christian
+          Fellowship.
+        </p>
       </div>
       <div class="col">
         <div class="p-2">
@@ -27,29 +30,6 @@
         <div class="p-2">
           <button class="btn-auth btn-openid" @click="goIn">Sign in with <b>OpenID</b></button>
         </div>
-
-        <!-- <form>
-          <div class="p-2">
-            <button class="btn btn-danger" @click="goIn">
-              <img src="/node_modules/bootstrap-icons/icons/cloud-download.svg" /> sign in with google
-            </button>
-          </div>
-          <div class="p-2">
-            <button class="btn btn-danger" @click="goIn">
-              <img src="/node_modules/bootstrap-icons/icons/cloud-download.svg" /> sign in with apple
-            </button>
-          </div>
-          <div class="p-2">
-            <button class="btn btn-danger" @click="goIn">
-              <img src="/node_modules/bootstrap-icons/icons/cloud-download.svg" /> sign in with facebook
-            </button>
-          </div>
-          <div class="p-2">
-            <button class="btn btn-danger" @click="goIn">
-              <img src="/node_modules/bootstrap-icons/icons/cloud-download.svg" /> sign in with microsoft
-            </button>
-          </div>
-        </form> -->
       </div>
     </div>
   </div>
