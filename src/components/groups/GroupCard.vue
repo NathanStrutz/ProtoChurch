@@ -16,7 +16,7 @@ import { mapActions, mapGetters, mapState } from "vuex";
 
 export default {
   props: {
-    id: { type: Number },
+    id: { type: String },
   },
   computed: {
     ...mapGetters("groups", ["getGroup"]),

@@ -11,7 +11,7 @@ const routes = [
   { path: "/signup", component: Signup, meta: { public: true } },
   { path: "/inside", component: Inside },
   { path: "/groups", component: Groups },
-  { path: "/groups/:slug", component: GroupHome },
+  { path: "/groups/:id", component: GroupHome, props: true },
   { path: "/notifications", component: Inside },
   { path: "/profile", component: Inside },
 ];
@@ -30,8 +30,12 @@ router.beforeEach((to, from) => {
   if (to.meta.public || (!to.meta.public && store.state.user)) {
     return true;
   } else {
-    router.push("/");
-    return false;
+    // Bypass security - go wherever
+    store.commit("logIn", { id: 99, name: "Whoever" });
+    return true;
+    // Enable security - go to the login page if you aren't logged in
+    // router.push("/");
+    // return false;
   }
 });
 
