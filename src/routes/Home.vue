@@ -7,25 +7,25 @@
       </div>
       <div class="col">
         <div class="p-2">
-          <a class="btn-auth btn-facebook" href="" @click="goIn">Sign in with <b>Facebook</b></a>
+          <button class="btn-auth btn-facebook" @click="goIn">Sign in with <b>Facebook</b></button>
         </div>
         <div class="p-2">
-          <button class="btn-auth btn-twitter" href="" @click="goIn">Sign in with <b>Twitter</b></button>
+          <button class="btn-auth btn-twitter" @click="goIn">Sign in with <b>Twitter</b></button>
         </div>
         <div class="p-2">
-          <a class="btn-auth btn-google" href="" @click="goIn">Sign in with <b>Google</b></a>
+          <button class="btn-auth btn-google" @click="goIn">Sign in with <b>Google</b></button>
         </div>
         <div class="p-2">
-          <button class="btn-auth btn-github" href="" @click="goIn">Sign in with <b>GitHub</b></button>
+          <button class="btn-auth btn-github" @click="goIn">Sign in with <b>GitHub</b></button>
         </div>
         <div class="p-2">
-          <a class="btn-auth btn-yahoo" href="" @click="goIn">Sign in with <b>Yahoo!</b></a>
+          <button class="btn-auth btn-yahoo" @click="goIn">Sign in with <b>Yahoo!</b></button>
         </div>
         <div class="p-2">
-          <a class="btn-auth btn-windows" href="" @click="goIn">Sign in with <b>Windows Live ID</b></a>
+          <button class="btn-auth btn-windows" @click="goIn">Sign in with <b>Windows Live ID</b></button>
         </div>
         <div class="p-2">
-          <a class="btn-auth btn-openid" href="" @click="goIn">Sign in with <b>OpenID</b></a>
+          <button class="btn-auth btn-openid" @click="goIn">Sign in with <b>OpenID</b></button>
         </div>
 
         <!-- <form>
@@ -60,15 +60,12 @@ import { mapMutations } from "vuex";
 
 export default {
   methods: {
-    ...mapMutations(["logIn", "logOut"]),
+    ...mapMutations(["logIn"]),
 
     goIn() {
       this.logIn({ id: 1, name: "Nathan" });
       this.$router.push("/inside");
     },
-  },
-  onRouteEnter() {
-    this.logOut();
   },
 };
 </script>

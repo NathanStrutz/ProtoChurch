@@ -23,7 +23,13 @@ const router = createRouter({
 });
 
 router.beforeEach((to, from) => {
-  if (!to.meta.public && store.state.user === null) {
+  if (to.meta.public && store.state.user) {
+    store.commit("logOut");
+  }
+
+  if (to.meta.public || (!to.meta.public && store.state.user)) {
+    return true;
+  } else {
     router.push("/");
     return false;
   }
