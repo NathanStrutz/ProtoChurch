@@ -5,6 +5,7 @@ import Signup from "./Signup.vue";
 import Inside from "./Inside.vue";
 import Groups from "./Groups.vue";
 import GroupHome from "./GroupHome.vue";
+import Notifications from "./Notifications.vue";
 
 const routes = [
   { path: "/", component: Home, meta: { public: true } },
@@ -12,7 +13,7 @@ const routes = [
   { path: "/inside", component: Inside },
   { path: "/groups", component: Groups },
   { path: "/groups/:id", component: GroupHome, props: true },
-  { path: "/notifications", component: Inside },
+  { path: "/notifications", component: Notifications },
   { path: "/profile", component: Inside },
 ];
 
