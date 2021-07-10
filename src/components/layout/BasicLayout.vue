@@ -18,9 +18,9 @@
           <li class="nav-item" v-if="!user">
             <router-link class="nav-link" to="/">Home</router-link>
           </li>
-          <li class="nav-item" v-if="!user">
+          <!-- <li class="nav-item" v-if="!user">
             <router-link class="nav-link" to="/signup">Sign Up</router-link>
-          </li>
+          </li> -->
           <li class="nav-item" v-if="user">
             <router-link class="nav-link" to="/inside">Home</router-link>
           </li>
@@ -31,7 +31,7 @@
             <router-link class="nav-link" to="/notifications">Notifications</router-link>
           </li>
           <li class="nav-item" v-if="user">
-            <router-link class="nav-link" to="/profile">Proifle</router-link>
+            <router-link class="nav-link" to="/profile">Profile</router-link>
           </li>
         </ul>
         <form class="d-flex" v-if="!user">
@@ -42,7 +42,7 @@
     </div>
   </nav>
 
-  <div class="container">
+  <div class="container pt-3">
     <main class="row"><slot /></main>
   </div>
 </template>

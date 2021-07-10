@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="row">
-      <div class="col-8">
+      <div class="col-12 col-md-8">
         <discussion-area />
       </div>
       <div class="col">

@@ -1,0 +1,38 @@
+<template>
+  <div class="card">
+    <div class="card-header">
+      <h4>{{ group.name }}</h4>
+    </div>
+    <div class="card-body">{{ group.description }}</div>
+    <div class="card-footer text-end" v-if="group.isJoined">
+      <router-link :to="`/groups/${group.id}`">Enter Group</router-link>
+    </div>
+    <div class="card-footer text-end" v-else><a href="">Join this group</a></div>
+  </div>
+</template>
+
+<script>
+import { mapGetters, mapState } from "vuex";
+
+export default {
+  props: {
+    id: { type: Number },
+  },
+  computed: {
+    ...mapGetters("groups", ["getGroup"]),
+    group() {
+      return this.getGroup(this.id);
+    },
+  },
+};
+</script>
+
+<style lang="scss" scoped>
+.card {
+  width: 350px;
+  .card-body {
+    height: 150px;
+    overflow: hidden;
+  }
+}
+</style>

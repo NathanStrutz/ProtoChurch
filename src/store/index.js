@@ -1,5 +1,6 @@
 import { createStore } from "vuex";
 import { FeedStore } from "./feed";
+import { GroupsStore } from "./groups";
 
 const rootStore = {
   state: {
@@ -10,10 +11,14 @@ const rootStore = {
     logIn(state, user) {
       state.user = user;
     },
+    logOut(state) {
+      state.user = null;
+    },
   },
   actions: {},
   modules: {
     feed: FeedStore,
+    groups: GroupsStore,
   },
 };
 
