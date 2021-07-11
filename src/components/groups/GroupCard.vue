@@ -38,6 +38,8 @@ export default {
 <style lang="scss" scoped>
 .card {
   width: 350px;
+  margin-bottom: 2em;
+
   .card-body {
     height: 150px;
     overflow: hidden;
