@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="card my-4 mb-5 d-flex" v-for="note in notifications" :key="note.id">
+    <div class="card my-1 d-flex" v-for="note in notifications" :key="note.id">
       <div class="card-header d-flex justify-content-between">
         <div class="d-flex">
           <random-avatar :size="40" />
@@ -25,6 +25,7 @@
 import RandomAvatar from "@/components/social/RandomAvatar.vue";
 import BsIcon from "@/components/social/BsIcon.vue";
 import { relativeDateFormat } from "@/utils/date-format";
+import { generateDate_hourChange } from "@/utils/date-generation";
 
 class Notification {
   constructor(id, eventFrom, eventDate, eventText) {
@@ -40,11 +41,11 @@ export default {
   data() {
     return {
       notifications: [
-        new Notification(1, "Nathan Strutz", generateDate(1), "Joined your group 'The Orange Group'"),
-        new Notification(2, "Darien Gabriel", generateDate(2), "Replied to your post"),
-        new Notification(3, "Todd Luce", generateDate(4), "Replied to your post"),
-        new Notification(4, "Todd Luce", generateDate(11), "Liked to your post"),
-        new Notification(5, "Alanda Strutz", generateDate(18), "Liked your post"),
+        new Notification(1, "Nathan Strutz", generateDate_hourChange(-1), "Joined your group 'The Orange Group'"),
+        new Notification(2, "Darien Gabriel", generateDate_hourChange(-2), "Replied to your post"),
+        new Notification(3, "Todd Luce", generateDate_hourChange(-4), "Replied to your post"),
+        new Notification(4, "Todd Luce", generateDate_hourChange(-11), "Liked to your post"),
+        new Notification(5, "Alanda Strutz", generateDate_hourChange(-18), "Liked your post"),
       ],
     };
   },
@@ -52,10 +53,4 @@ export default {
     relativeDateFormat,
   },
 };
-
-function generateDate(hoursBehind) {
-  let d = new Date();
-  d.setHours(d.getHours() - hoursBehind);
-  return d.toISOString();
-}
 </script>

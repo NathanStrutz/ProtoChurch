@@ -7,7 +7,9 @@
           Connect with Christians, grow closer to God, and experience online community, right here at Grace Christian
           Fellowship.
         </p>
+        <p>Beware- this is a prototype, nothing works, all the data is fake.</p>
       </div>
+
       <div class="col">
         <div class="p-2">
           <button class="btn-auth btn-facebook" @click="goIn">Sign in with <b>Facebook</b></button>

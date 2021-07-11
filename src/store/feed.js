@@ -41,19 +41,19 @@ const FeedStore = {
       1: {
         id: 1,
         topicId: 1,
-        text: "Thanks for posting this. What a life changing story! unique#1",
+        text: "Thanks for posting this. What a life changing story! This is unique comment number 1",
         author: { name: "Todd Luce" },
       },
       2: {
         id: 2,
         topicId: 2,
-        text: "Thanks for posting this. What a life changing story! unique#2",
+        text: "Thanks for posting this. What a life changing story! This is unique comment number 2",
         author: { name: "Todd Luce" },
       },
       3: {
         id: 3,
         topicId: 3,
-        text: "Thanks for posting this. What a life changing story! unique#3",
+        text: "Thanks for posting this. What a life changing story! This is unique comment number 3",
         author: { name: "Todd Luce" },
       },
     },

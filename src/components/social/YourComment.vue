@@ -2,12 +2,7 @@
   <div class="d-flex">
     <random-avatar :size="40" class="mx-3 my-1" />
     <div class="flex-grow-1">
-      <input
-        class="form-control form-control-md mt-1"
-        type="text"
-        v-model="comment"
-        placeholder="Add your own comment..."
-      />
+      <input class="form-control form-control-md mt-1" type="text" v-model="comment" placeholder="Write a comment..." />
     </div>
     <button class="btn" title="Post your comment" :disabled="comment">
       <bs-icon icon="caret-right" :size="30" />
