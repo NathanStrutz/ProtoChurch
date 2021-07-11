@@ -23,7 +23,6 @@
 
 <script>
 import RandomAvatar from "@/components/social/RandomAvatar.vue";
-import BsIcon from "@/components/social/BsIcon.vue";
 import { relativeDateFormat } from "@/utils/date-format";
 import { generateDate_hourChange } from "@/utils/date-generation";
 
@@ -37,7 +36,7 @@ class Notification {
 }
 
 export default {
-  components: { RandomAvatar, BsIcon },
+  components: { RandomAvatar },
   data() {
     return {
       notifications: [
