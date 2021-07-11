@@ -1,7 +1,7 @@
 <template>
   <h2>My Groups</h2>
   <div class="container container-fluid">
-    <div class="row justify-content-center">
+    <div class="row">
       <div class="col" v-for="group in myGroups" :key="group.id">
         <group-card :id="group.id" />
       </div>
@@ -12,7 +12,7 @@
   </div>
   <h2 class="pt-5">Public Groups</h2>
   <div class="container container-fluid">
-    <div class="row justify-content-center">
+    <div class="row">
       <div class="col" v-for="group in openGroups" :key="group.id">
         <group-card :id="group.id" />
       </div>
