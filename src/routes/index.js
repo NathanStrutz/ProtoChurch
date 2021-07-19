@@ -7,6 +7,7 @@ import Groups from "./Groups.vue";
 import GroupHome from "./GroupHome.vue";
 import Notifications from "./Notifications.vue";
 import Profile from "./Profile.vue";
+import Prayer from "./Prayer.vue";
 
 const routes = [
   { path: "/", component: Home, meta: { public: true } },
@@ -15,6 +16,7 @@ const routes = [
   { path: "/groups", component: Groups },
   { path: "/groups/:id", component: GroupHome, props: true },
   { path: "/notifications", component: Notifications },
+  { path: "/prayer", component: Prayer },
   { path: "/profile", component: Profile },
 ];
 
