@@ -2,7 +2,7 @@
   <h2>My Groups</h2>
   <div class="container container-fluid">
     <div class="row">
-      <div class="col" v-for="group in myGroups" :key="group.id">
+      <div class="col-xs-12 col-sm-12 col-md-6 col-xl-4" v-for="group in myGroups" :key="group.id">
         <group-card :id="group.id" />
       </div>
       <div v-if="myGroups.length === 0">
@@ -13,7 +13,7 @@
   <h2 class="pt-5">Public Groups</h2>
   <div class="container container-fluid">
     <div class="row">
-      <div class="col" v-for="group in openGroups" :key="group.id">
+      <div class="col-xs-12 col-sm-12 col-md-6 col-xl-4" v-for="group in openGroups" :key="group.id">
         <group-card :id="group.id" />
       </div>
       <div v-if="openGroups.length === 0">
@@ -24,8 +24,8 @@
 </template>
 
 <script>
-import { mapGetters, mapState } from "vuex";
-import GroupCard from "../components/groups/GroupCard.vue";
+import { mapGetters } from "vuex";
+import GroupCard from "@/components/groups/GroupCard.vue";
 
 export default {
   components: { GroupCard },
